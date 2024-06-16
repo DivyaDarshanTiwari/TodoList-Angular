@@ -24,7 +24,12 @@ export class AppComponent {
   {
     const date= new Date(date1);
     console.log(work,prior,date1);
-    this.list.push({id:this.list.length,name: work, priority:prior, date: date1})
+    this.list.push({id:this.list.length+1,name: work, priority:prior, date: date1})
     console.log(this.list);
+  }
+
+  remove(id:number)
+  {
+    this.list = this.list.filter(item=>item.id!==id);
   }
   }

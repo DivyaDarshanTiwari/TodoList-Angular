@@ -1,13 +1,12 @@
 <section class="flex">
 
   <form >
-    <div>
+    <div class="">
       <label for="todo">Task:</label>
       <input type="text" name="todo" placeholder="Enter your to do Task" #task>
     </div>
-    <div>
-      <label for="Priority">Priority</label>
-      <br>
+    <div style="text-align: center;">
+      <h4>Priority</h4>
       <input type="radio" name="priority" value="Least" #p>
       <label for="least">Least</label>
       <input type="radio" name="priority" value="Medium" #p>
@@ -36,6 +35,8 @@
       <td>{{item.name}}</td>
       <td>{{item.priority}}</td>
       <td>{{item.date}}</td>
+      <button type="button" (click)="remove(item.id)">Remove</button>
     </tr>
   </table>
 </section>
+

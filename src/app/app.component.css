@@ -1,10 +1,29 @@
 .flex{
     display: grid;
-    justify-items: center; /* horizontal centering */
+    justify-items: center; 
     align-items: center; 
+    padding: 30%;
+    background-color: rgba(0, 0, 0, 0.845);
+    color: #f1f1f1;
 }
 
-table th,td{
-    border: 2px solid black;
-    border-collapse: collapse;
+form{
+    display: grid;
+    row-gap: 30px;
+}
+table, th , td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding:0px 30px;
+}
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+table{
+    margin: 20px;
+    color: black;
 }
