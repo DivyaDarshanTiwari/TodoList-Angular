@@ -1,0 +1,10 @@
+.flex{
+    display: grid;
+    justify-items: center; /* horizontal centering */
+    align-items: center; 
+}
+
+table th,td{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
