@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NgFor } from '@angular/common';
+import { IntreComponent } from './intre/intre.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NgFor],
+  imports: [RouterOutlet,NgFor,IntreComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
