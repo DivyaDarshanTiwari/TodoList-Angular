@@ -2,7 +2,7 @@
     display: grid;
     justify-items: center; 
     align-items: center; 
-    padding: 30%;
+    padding: 10rem;
     background-color: rgba(0, 0, 0, 0.845);
     color: #f1f1f1;
 }
@@ -26,4 +26,13 @@ table tr:nth-child(even) {
 table{
     margin: 20px;
     color: black;
+}
+
+button{
+  background-color: #005cbb  !important;
+  border-radius: 2rem; 
+}
+
+.disabled{
+  background-color: grey  !important;
 }

@@ -4,24 +4,28 @@
   <form >
     <div class="">
       <label for="todo">Task:</label>
-      <input type="text" name="todo" placeholder="Enter your to do Task" #task>
+      <input type="text" name="todo" placeholder="Enter your to do Task" [(ngModel)]="tasks">
     </div>
     <div style="text-align: center;">
       <h4>Priority</h4>
-      <input type="radio" name="priority" value="Least" #p>
-      <label for="least">Least</label>
-      <input type="radio" name="priority" value="Medium" #p>
-      <label for="medium">Medium</label>
-      <input type="radio" name="priority" value="Greatest" #p>
-      <label for="Greatest">Greatest</label>
+      @for (item of priority; track $index) {
+        <div>
+        <input type="radio" name="priority" [value]="item" [(ngModel)]="prior_value">
+        <label for="least">{{item}}</label>
+      </div>
+      }
     </div>
   
     <div>
       <label for="date">Due Date</label>
-      <input type="date" name="date" #date>
+      <input type="date" name="date" [(ngModel)]="date">
     </div>
-  
-    <button type="button"(click)="addition(task.value,p.value,date.value)">Submit</button>
+    @if(tasks && prior_value && date){
+      <button  mat-flat-button type="button"(click)="addition(tasks,prior_value,date)">Submit</button>
+    }
+    @else {
+      <button  mat-flat-button disabled type="button" class="disabled">Submit</button>
+    }
   </form>
   
   
@@ -36,7 +40,7 @@
       <td>{{item.name}}</td>
       <td>{{item.priority}}</td>
       <td>{{item.date}}</td>
-      <button type="button" (click)="remove(item.id)">Remove</button>
+      <button mat-flat-button type="button" (click)="remove(item.id)">Remove</button>
     </tr>
   </table>
 </section>
